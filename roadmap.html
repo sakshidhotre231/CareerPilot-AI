@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generate Roadmap - CareerPilot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+    <link rel="stylesheet" href="roadmap.css">
+</head>
+<body>
+
+     <!-- NAVBAR -->
+    <nav class="assessment_navbar">
+        <div class="nav-inner container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">CP</div>
+                CareerPilot
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="assessment-dashboard roadmap-container">
+        <div class="welcome-card">
+            <h1>Generate Your Career Roadmap</h1>
+            <p>Search for any career and get a detailed roadmap with phases, skills, and duration.</p>
+        </div>
+
+        <!-- Search input -->
+        <div class="roadmap-search">
+            <input type="text" id="careerInput" placeholder="Enter career name">
+            <button class="action-card primary-action" id="generateRoadmapBtn">Generate Roadmap</button>
+        </div>
+
+        <!-- Roadmap Display -->
+        <div class="roadmap-display" id="roadmapDisplay"></div>
+    </div>
+
+    <button id="startTrackBtn" class="btn-primary">
+    Start My Track
+</button>
+
+    <script src="roadmap.js"></script>
+</body>
+</html>

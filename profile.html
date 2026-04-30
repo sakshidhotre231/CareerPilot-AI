@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile - CareerPilot</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="assessment_navbar">
+        <div class="nav-inner container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">CP</div>
+                CareerPilot
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="profile-page">
+        <div class="profile-card">
+            <h1>User Profile</h1>
+
+            <div class="user-info">
+                <p><strong>Name:</strong> <span id="userName"></span></p>
+                <p><strong>Email:</strong> <span id="userEmail"></span></p>
+            </div>
+
+           
+            <div class="dropdown-section">
+                <button class="dropdown-btn" onclick="toggleDropdown('assessmentList')">
+                    Taken Assessments ▼
+                </button>
+                <div id="assessmentList" class="dropdown-content">
+                    <a href="assessment-report.html">Assessment 1 - Web Developer</a>
+                    <a href="assessment-report.html">Assessment 2 - Data Analyst</a>
+                </div>
+            </div>
+
+            
+            <div class="dropdown-section">
+                <button class="dropdown-btn" onclick="toggleDropdown('roadmapList')">
+                    Generated Roadmaps ▼
+                </button>
+                <div id="roadmapList" class="dropdown-content">
+                    <a href="roadmap.html">Web Development Roadmap</a>
+                    <a href="roadmap.html">Java Developer Roadmap</a>
+                </div>
+            </div>
+
+            <div class="dropdown-section">
+    <button class="dropdown-btn" onclick="toggleDropdown('trackerList')">
+        My Trackers ▼
+    </button>
+    <div id="trackerList" class="dropdown-content"></div>
+</div>
+
+
+            <button class="logout-btn" onclick="logoutUser()">Logout</button>
+        </div>
+        
+
+    </section>
+
+    <script src="profile.js"></script>
+</body>
+</html>

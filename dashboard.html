@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Career Assessment Dashboard - CareerPilot</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="assessment_navbar">
+        <div class="nav-inner container">
+            <a href="index.html" class="nav-logo">
+                <div class="nav-logo-icon">CP</div>
+                CareerPilot
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="#" class="active">Dashboard</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <section class="assessment-dashboard container">
+
+        <!-- Welcome -->
+        <div class="welcome-card">
+            <h1>Welcome Back, Sakshi 👋</h1>
+            <p>Let’s build your dream career path today.</p>
+        </div>
+
+        
+
+    <div class="dashboard-cards">
+
+    <div class="dashboard-card">
+        <h2>Career Assessment</h2>
+        <p>
+            Discover the best career path based on your
+            skills, interests, strengths, and goals.
+        </p>
+        <button class="btn-primary" id="startAssessmentBtn">
+            Start Assessment
+        </button>
+    </div>
+
+    <div class="dashboard-card">
+        <h2>Generate Roadmap</h2>
+        <p>
+            Get a personalized step-by-step roadmap with
+            skills, projects, courses, and milestones.
+        </p>
+        <button class="btn-primary" id="generateRoadmapBtn">
+            Generate Roadmap
+        </button>
+    </div>
+
+</div>
+
+
+</div>
+        <div class="status-grid">
+
+            <div class="status-card">
+                <h3>Your Assessments </h3>
+                 <p id="fetchAssessments" style="cursor:pointer; color:#2563eb;">
+        Fetch
+    </p>
+            
+        </div>
+
+           <div class="status-card">
+    <h3>Recommended Careers</h3>
+    <p id="viewCareers" style="cursor:pointer; color:#2563eb;">
+        View
+    </p>
+</div>
+
+
+
+            <div class="status-card">
+                <h3>Skills to Explore</h3>
+                <p id="viewSkills" style="cursor:pointer; color:#2563eb;">
+    Learn Skills
+</p>
+
+            </div>
+
+        </div>
+
+<h2 class="section-title">Trending Skills</h2>
+        <!-- Learning Resources -->
+<div class="resource-grid">
+
+    <div class="resource-card">
+        <h3>Java Course</h3>
+        <a href="https://www.youtube.com/watch?v=8hly31xKli0" target="_blank">
+            Start Learning
+        </a>
+    </div>
+
+    <div class="resource-card">
+        <h3>DSA Basics</h3>
+        <a href="https://www.youtube.com/watch?v=RBSGKlAvoiM" target="_blank">
+            Get Course
+        </a>
+    </div>
+
+    <div class="resource-card">
+        <h3>UI/UX Design</h3>
+        <a href="https://www.youtube.com/watch?v=0Z7cZbV1o0Q" target="_blank">
+            Start Here
+        </a>
+    </div>
+
+</div>
+
+
+    </section>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

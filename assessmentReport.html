@@ -1,0 +1,136 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessment Report - CareerPilot</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assessmentReport.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="assessment_navbar">
+        <div class="nav-inner container">
+            <a href="dashboard.html" class="nav-logo">
+                <div class="nav-logo-icon">CP</div>
+                CareerPilot
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="assessment.html" class="active">Assessment</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="report-container">
+
+        <h1>Assessment Report</h1>
+
+        <div class="report-card">
+            <p><strong>Best Domain:</strong> <span id="bestDomain"></span></p>
+            <p><strong>Recommended Career:</strong> <span id="career"></span></p>
+        </div>
+
+        <div class="report-card">
+            <h3>Top Career Suggestions</h3>
+            <div id="careerSuggestions"></div>
+        </div>
+
+        <div class="report-card">
+            <h3>Why this suits you</h3>
+            <p id="careerBrief"></p>
+        </div>
+
+        <div class="report-card">
+            <h3>Skills Required</h3>
+            <ul id="skillsList"></ul>
+        </div>
+
+        <div class="report-card">
+            <h3>Future Scope</h3>
+            <p id="futureScope"></p>
+        </div>
+
+    </div>
+
+   
+<script>
+    const recommendedCareer =
+        localStorage.getItem("recommendedCareer");
+
+    const bestDomain =
+        localStorage.getItem("bestDomain");
+
+    const careerSuggestionsRaw =
+        localStorage.getItem("careerSuggestions") || "";
+
+    const careerSuggestions =
+        careerSuggestionsRaw
+            ? careerSuggestionsRaw.split(",").map(item => item.trim())
+            : [];
+
+    const careerBrief =
+        localStorage.getItem("careerBrief");
+
+    const futureScope =
+        localStorage.getItem("futureScope");
+
+    const skillsRaw =
+        localStorage.getItem("skills") || "";
+
+    const skills =
+        skillsRaw
+            ? skillsRaw.split(",").map(item => item.trim())
+            : [];
+
+    // ✅ Main report data
+    document.getElementById("career").innerText =
+        recommendedCareer || "Not Available";
+
+    document.getElementById("bestDomain").innerText =
+        bestDomain || "Not Available";
+
+    document.getElementById("careerBrief").innerText =
+        careerBrief ||
+        "This career strongly aligns with your interests and strengths.";
+
+    document.getElementById("futureScope").innerText =
+        futureScope ||
+        "Excellent growth opportunities in the future.";
+
+    // ✅ Career Suggestions
+    const suggestionsContainer =
+        document.getElementById("careerSuggestions");
+
+    suggestionsContainer.innerHTML = "";
+
+    careerSuggestions.forEach(career => {
+        const careerCard = document.createElement("div");
+        careerCard.className = "career-suggestion-card";
+        careerCard.innerHTML = `<p>${career}</p>`;
+        suggestionsContainer.appendChild(careerCard);
+    });
+
+    // ✅ Skills List
+    const skillsList =
+        document.getElementById("skillsList");
+
+    skillsList.innerHTML = "";
+
+    skills.forEach(skill => {
+        const li = document.createElement("li");
+        li.innerText = skill;
+        skillsList.appendChild(li);
+    });
+</script>
+
+
+
+</body>
+</html>
+

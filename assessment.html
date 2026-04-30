@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Career Assessment - CareerPilot</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assessment.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="assessment_navbar">
+        <div class="nav-inner container">
+            <a href="dashboard.html" class="nav-logo">
+                <div class="nav-logo-icon">CP</div>
+                CareerPilot
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="assessment.html" class="active">Assessment</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="assessment-container container">
+
+        <div class="assessment-header">
+            <h1>AI Career Assessment</h1>
+            <p>Answer 7 smart questions to discover your ideal career domain</p>
+        </div>
+
+        <!-- Progress -->
+        <div class="progress-card">
+            <p id="progressText">Question 1 of 7</p>
+            <div class="progress-bar">
+                <div class="progress-fill" id="progressFill"></div>
+            </div>
+        </div>
+
+        <!-- Question Card -->
+        <div class="question-card">
+            <h2 id="questionTitle">Question 1</h2>
+            <p id="questionText"></p>
+
+            <div class="options-group" id="optionsGroup"></div>
+
+            <div class="question-actions">
+                <button class="btn-outline" id="prevBtn">Previous</button>
+                <button class="btn-primary" id="nextBtn">Next</button>
+            </div>
+        </div>
+
+        <!-- AI Insight -->
+        <div class="insight-card">
+            <h3>AI Insight</h3>
+            <p id="insightText">
+                This assessment evaluates your strengths across multiple career domains.
+            </p>
+        </div>
+
+    </section>
+
+    <script src="assessment.js"></script>
+</body>
+</html>

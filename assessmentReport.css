@@ -1,0 +1,87 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.report-container {
+    max-width: 850px;
+    margin: 60px auto;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+}
+
+.report-container h1 {
+    font-size: 30px;
+    color: #1e3a8a;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.report-card {
+    background: #f8fafc;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    border-left: 4px solid #2563eb;
+}
+
+.report-card h3 {
+    margin-top: 0;
+    margin-bottom: 14px;
+    color: #1e3a8a;
+    font-size: 20px;
+}
+
+.report-card p {
+    line-height: 1.7;
+    font-size: 15px;
+    color: #444;
+}
+
+#career {
+    color: #2563eb;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+#bestDomain {
+    color: #0f766e;
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.career-suggestion-card {
+    background: #eef2ff;
+    padding: 14px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    border: 1px solid #dbeafe;
+    transition: 0.3s ease;
+}
+
+.career-suggestion-card:hover {
+    transform: translateY(-2px);
+}
+
+#skillsList {
+    padding-left: 20px;
+    margin: 0;
+}
+
+#skillsList li {
+    margin: 10px 0;
+    background-color: #eef2ff;
+    padding: 10px;
+    border-radius: 8px;
+    list-style-type: disc;
+}
+
+.section-highlight {
+    color: #2563eb;
+    font-weight: 600;
+}

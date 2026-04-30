@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracker - CareerPilot</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="tracker.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container nav-inner">
+            <a href="dashboard.html" class="nav-logo">
+                CareerPilot
+            </a>
+
+            <ul class="nav-links">
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="assessment.html">Assessment</a></li>
+                <li><a href="roadmap.html">Roadmap</a></li>
+                <li><a href="tracker.html">Tracker</a></li>
+                <li><a href="profile.html">Profile</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    
+    <section class="tracker-page">
+        <div class="container">
+
+            <div class="tracker-card">
+
+                <p class="section-label">TRACKER</p>
+                <h1 class="section-title">Track Your Learning Journey</h1>
+                <p class="tracker-subtext">
+                    Select one of your previously generated roadmaps
+                    and start tracking your progress.
+                </p>
+
+                
+                <select id="roadmapDropdown" class="tracker-dropdown">
+                    <option value="">Select a roadmap</option>
+                </select>
+
+                
+                <button class="btn-primary" id="loadTrackerBtn">
+                    Start Tracking
+                </button>
+
+                
+                <div id="trackerContent" style="display:none; margin-top:40px;">
+
+                    <h2 id="careerName"></h2>
+
+                    <div class="progress-wrapper">
+                        <div class="progress-header">
+                            <span>Progress</span>
+                            <span id="progressText">0%</span>
+                        </div>
+
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                    </div>
+
+                    <div id="stepsContainer" class="steps-list"></div>
+
+                </div>
+
+            </div>
+
+        </div>
+        <div id="completionMessage"></div>
+
+    </section>
+
+    <script src="tracker.js"></script>
+</body>
+</html>
