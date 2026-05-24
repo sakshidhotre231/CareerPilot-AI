@@ -87,26 +87,48 @@ function displayRoadmap(roadmapData, careerName, generatedDate) {
 
     // NEW Hugging Face text format support
     else {
-        const textCard = document.createElement("div");
-        textCard.classList.add("phase-card");
 
-        const text = document.createElement("div");
-text.classList.add("roadmap-text");
+    roadmapData = roadmapData
+        .replace(/\*\*/g, "")
+        .replace(/\*/g, "")
+        .replace(/#+/g, "");
 
-let formattedText = roadmapData
-    .replace(/\*\*(.*?)\*\*/g, "<h3>$1</h3>")
-    .replace(/\*/g, "")
-    .replace(/\n{2,}/g, "<br>")
-    .replace(/\n/g, "<br>")
-    .replace(/- /g, "• ");
+    const phases = roadmapData.split(/(?=Phase \d+:)/);
 
-text.innerHTML = `<p>${formattedText}</p>`;
+    phases.forEach((phase) => {
 
+        if (phase.trim() !== "") {
 
+            const phaseCard = document.createElement("div");
+            phaseCard.classList.add("phase-card");
 
-        textCard.appendChild(text);
-        display.appendChild(textCard);
-    }
+            const lines = phase.trim().split("\n");
+
+            const title = lines.shift();
+
+            const heading = document.createElement("h3");
+            heading.innerText = title;
+
+            const list = document.createElement("ul");
+
+            lines.forEach(line => {
+
+                if (line.trim() !== "") {
+
+                    const li = document.createElement("li");
+                    li.innerText = line.trim();
+
+                    list.appendChild(li);
+                }
+            });
+
+            phaseCard.appendChild(heading);
+            phaseCard.appendChild(list);
+
+            display.appendChild(phaseCard);
+        }
+    });
+}
 }
 
 
